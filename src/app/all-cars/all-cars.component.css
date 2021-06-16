@@ -1,0 +1,30 @@
+table {
+    width: 90%;
+    margin: auto;
+}
+
+.edit, .delete{
+    font-size: 23px;
+    margin-top: 11px;
+}
+
+.edit:hover{
+    color: #6b4ba6;
+    font-size: 30px;
+}
+
+.delete:hover{
+    color: #fd0303;
+    font-size: 30px;
+}
+
+.action-header{
+    text-align: center;
+}
+
+.action-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 43px;
+}

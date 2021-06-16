@@ -1,0 +1,14 @@
+fieldset{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 17px;
+}
+
+button{
+    height: 59%;
+    position: relative;
+    top: 12px;
+    background-color: #3a0f88bf;
+    color: #fff;
+    padding: 8px 8px;
+}

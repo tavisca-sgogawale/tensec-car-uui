@@ -1,0 +1,45 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+<form [formGroup]="form">
+    <fieldset>
+        <mat-form-field appearance="fill">
+            <mat-label>Id</mat-label>
+            <input matInput  type="text" name="id" formControlName="id">
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Car Name</mat-label>
+            <input matInput type="text" required name="name" formControlName="name">
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Manufacturer</mat-label>
+            <input matInput type="text" required name="manufact" formControlName="manufact">
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Select  Type</mat-label>
+            <mat-select required formControlName="types">
+                <mat-option value="Hatchback">Hatchback</mat-option>
+                <mat-option value="Sedan">Sedan</mat-option>
+                <mat-option value="SUV">SUV</mat-option>
+                <mat-option value="Crossover">Crossover</mat-option>
+                <mat-option value="Coupe">Coupe</mat-option>
+                <mat-option value="Convertible">Convertible</mat-option>
+            </mat-select>
+            </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Mileage</mat-label>
+            <input matInput type="text" required name="milage" formControlName="milage">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput type="text" required name="price" formControlName="price">
+        </mat-form-field>
+    
+        <button color="primary" *ngIf="!loading && !update" [disabled]="!form.valid" (click)="add()">Add Info</button>
+        <button color="primary" *ngIf="!loading && update" [disabled]="!form.valid" (click)="updateInfo()">Update Info</button>
+    </fieldset>
+  </form>
